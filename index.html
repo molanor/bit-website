@@ -5,12 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biografía de Juan Pablo Molano Rojas</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f5f5f5;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            max-height: 200px;
+        }
+
+        section {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #galeria div {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        #galeria img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (min-width: 576px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            #galeria div {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+            }
+
+            header img {
+                max-height: 250px;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+            #trayectoria div {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            #galeria div {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 992px) {
+            body {
+                max-width: 80%;
+            }
+
+            header {
+                flex-direction: row;
+                text-align: left;
+                justify-content: flex-start;
+                gap: 2rem;
+            }
+
+            header h1, header p {
+                margin: 0;
+            }
+
+            #introduccion, #vida-personal {
+                column-count: 2;
+                column-gap: 2rem;
+            }
+
+            #trayectoria div {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            #galeria div {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            #contacto ul {
+                display: flex;
+                gap: 2rem;
+                list-style: none;
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="./imag/foto_1.png" alt="Juan Pablo Molano Rojas">
-        <h1>Juan Pablo Molano Rojas</h1> 
-        <p>Biografía personal y profesional</p>
+        <div>
+            <h1>Juan Pablo Molano Rojas</h1> 
+            <p>Biografía personal y profesional</p>
+        </div>
     </header>
     
     <section id="introduccion">
@@ -24,28 +153,22 @@
     <section id="trayectoria">
         <h2>Trayectoria</h2>
         <div>
-            <h3>Logros</h3>
-            <p>La trayectoria de vida de Juan Pablo Molano
-                Juan Pablo Molano nació en 1982 en un pequeño pueblo llamado San Vicente, enclavado en las montañas andinas de Colombia. Hijo de Elena, maestra de escuela, y Ricardo, un caficultor respetado en la región, Juan Pablo creció entre cafetales y con una profunda conexión con la naturaleza.
-                Desde muy joven, mostró una curiosidad insaciable y una capacidad extraordinaria para predecir cambios climáticos observando el comportamiento de plantas y animales. Los ancianos del pueblo notaron este don especial y le enseñaron conocimientos ancestrales sobre la tierra.
-                A los 16 años, durante una sequía devastadora, aplicó sus observaciones para desarrollar técnicas de conservación de agua que salvaron muchas cosechas locales. Este éxito le valió una beca para estudiar meteorología en la Universidad Nacional de Colombia en Bogotá.
-                Durante sus años universitarios (2000-2005), Juan Pablo se destacó académicamente pero extrañaba sus montañas. Complementó sus estudios científicos con investigaciones sobre conocimientos tradicionales de comunidades indígenas y campesinas, convencido de que la integración de ambos saberes era crucial para enfrentar el cambio climático.
-                En 2006, con su título en mano, rechazó ofertas de trabajo en prestigiosas instituciones internacionales y regresó a su región. Allí fundó el "Centro de Conocimiento Climático Integrado", donde desarrolló un sistema de alertas tempranas que combinaba tecnología moderna con indicadores tradicionales.
-                Entre 2008 y 2015, su sistema se expandió a otras regiones andinas, salvando incontables cosechas y vidas durante eventos climáticos extremos. Su trabajo atrajo la atención internacional, lo que le permitió obtener financiamiento para ampliar sus investigaciones.
-                En 2017, publicó su libro "Voces de la Tierra: Diálogo entre Ciencia y Sabiduría Ancestral", que se convirtió en referencia obligada en estudios ambientales y antropológicos.
-                Para 2020, Juan Pablo había creado una red latinoamericana de observadores climáticos comunitarios, capacitando a más de 5,000 personas en técnicas híbridas de monitoreo ambiental.
-                En 2023, recibió el Premio Global de Innovación Ambiental por su enfoque revolucionario que había demostrado ser más efectivo que los sistemas convencionales en regiones montañosas y rurales.
-                Actualmente, Juan Pablo divide su tiempo entre la enseñanza en universidades de prestigio, la asesoría a gobiernos sobre políticas de adaptación climática, y su trabajo de campo en comunidades vulnerables. Sigue viviendo en San Vicente, en una casa sostenible construida por él mismo, donde cultiva café y plantas medicinales.
-                Su mayor legado ha sido demostrar que las soluciones más efectivas para los desafíos contemporáneos surgen cuando se valoran por igual el conocimiento científico moderno y la sabiduría tradicional de las comunidades.</p>
+            <div>
+                <h3>Logros</h3>
+                <p>La trayectoria de vida de Juan Pablo Molano
+                    Juan Pablo Molano nació en 1982 en un pequeño pueblo llamado San Vicente, enclavado en las montañas andinas de Colombia. Hijo de Elena, maestra de escuela, y Ricardo, un caficultor respetado en la región, Juan Pablo creció entre cafetales y con una profunda conexión con la naturaleza.
+                    Desde muy joven, mostró una curiosidad insaciable y una capacidad extraordinaria para predecir cambios climáticos observando el comportamiento de plantas y animales. Los ancianos del pueblo notaron este don especial y le enseñaron conocimientos ancestrales sobre la tierra.</p>
+            </div>
             
-            <h3>1989</h3>
-            <p>Con apenas siete años, Juan Pablo Molano experimentó una revelación que marcaría su destino cuando se perdió durante una tormenta en las montañas. En lugar de atemorizarse, el pequeño observó cómo ciertos patrones en las nubes y el comportamiento de los insectos indicaban la dirección correcta. Encontró el camino a casa utilizando estas señales naturales, asombrando a los rescatistas que lo buscaban. Este incidente despertó su fascinación por la naturaleza como sistema de comunicación y su abuelo, reconociendo su don, comenzó a enseñarle los conocimientos ancestrales sobre predicción climática que habían pasado de generación en generación.</p>
+            <div>
+                <h3>1989</h3>
+                <p>Con apenas siete años, Juan Pablo Molano experimentó una revelación que marcaría su destino cuando se perdió durante una tormenta en las montañas. En lugar de atemorizarse, el pequeño observó cómo ciertos patrones en las nubes y el comportamiento de los insectos indicaban la dirección correcta. Encontró el camino a casa utilizando estas señales naturales, asombrando a los rescatistas que lo buscaban. Este incidente despertó su fascinación por la naturaleza como sistema de comunicación y su abuelo, reconociendo su don, comenzó a enseñarle los conocimientos ancestrales sobre predicción climática que habían pasado de generación en generación.</p>
+            </div>
             
-            <h3>1991</h3>
-            <p>Juan Pablo creó su primer "cuaderno de observaciones climáticas" donde anotaba diariamente patrones de nubes, comportamiento animal y cambios en la vegetación junto con sus predicciones. Su maestra, impresionada por la precisión de sus anotaciones, lo inscribió en una feria científica regional donde su sencillo pero efectivo sistema de predicción ganó reconocimiento. Un meteorólogo visitante quedó tan impactado que comenzó una correspondencia regular con el niño, enviándole libros científicos que complementaban su conocimiento intuitivo. Este intercambio entre ciencia formal y observación empírica sentó las bases de su futura metodología integradora.</p>
-            
-            <h3>1998</h3>
-            <p> A los dieciséis años, Juan Pablo lideró un esfuerzo comunitario durante la peor sequía que había afectado la región en décadas. Utilizando su sistema híbrido de predicción, identificó áreas donde el agua subterránea estaba más accesible y coordinó la construcción de reservorios estratégicos. Además, implementó técnicas de conservación de humedad que había estudiado de comunidades del desierto, adaptándolas al contexto andino. Mientras otras zonas perdieron hasta el 80% de sus cultivos, las comunidades que siguieron sus recomendaciones salvaron la mayor parte de sus cosechas. Este éxito, documentado por autoridades agrícolas regionales, le valió una beca completa para estudiar en la Universidad Nacional, representando un punto de inflexión que lo catapultaría del conocimiento local a la escena académica.</p>
+            <div>
+                <h3>1998</h3>
+                <p>A los dieciséis años, Juan Pablo lideró un esfuerzo comunitario durante la peor sequía que había afectado la región en décadas. Utilizando su sistema híbrido de predicción, identificó áreas donde el agua subterránea estaba más accesible y coordinó la construcción de reservorios estratégicos. Además, implementó técnicas de conservación de humedad que había estudiado de comunidades del desierto, adaptándolas al contexto andino. Mientras otras zonas perdieron hasta el 80% de sus cultivos, las comunidades que siguieron sus recomendaciones salvaron la mayor parte de sus cosechas.</p>
+            </div>
         </div>
     </section>
     
@@ -69,6 +192,7 @@
             <img src="./imag/ruta-a-imagen5.jpg" alt="Descripción de la imagen 5">
             <img src="./imag/ruta-a-imagen6.jpg" alt="Descripción de la imagen 6">
         </div>
+    </section>
     
     <section id="vida-personal">
         <h2>Vida Personal</h2>
@@ -84,14 +208,14 @@
         <h2>Contacto</h2>
         <p>Puedes contactar con Juan Pablo Molano Rojas a través de los siguientes medios:</p>
         <ul>
-            <li>Email: <a href="molanor.juan@gmail.com">molanor.juan@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/juan-pablo-molano-rojas-30029a113/">https://www.linkedin.com/in/juan-pablo-molano-rojas-30029a113/</a></li>
+            <li>Email: <a href="mailto:molanor.juan@gmail.com">molanor.juan@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/juan-pablo-molano-rojas-30029a113/">Juan Pablo Molano Rojas</a></li>
         </ul>
     </section>
     
     <footer>
         <p>© 2025 - Biografía de Juan Pablo Molano Rojas</p>
-        <p>Última actualización: 6 de abril de 2025</p>
+        <p>Última actualización: 21 de abril de 2025</p>
     </footer>
 </body>
 </html>
