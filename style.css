@@ -24,6 +24,11 @@ body {
     padding: 0;
 }
 
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
 header {
     background-color: var(--secondary-bg-color);
     text-align: center;
@@ -88,6 +93,18 @@ li {
     margin-bottom: 1rem;
 }
 
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Trayectoria Section */
 #trayectoria div {
     display: flex;
     flex-direction: column;
@@ -103,6 +120,7 @@ li {
     margin-bottom: 0.5rem;
 }
 
+/* Galeria Section */
 #galeria div {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -123,6 +141,7 @@ li {
     transform: scale(1.05);
 }
 
+/* Videos Section */
 #videos div {
     margin-bottom: 2rem;
 }
@@ -135,6 +154,7 @@ li {
     margin-bottom: 1rem;
 }
 
+/* Contacto Section */
 #contacto ul {
     list-style-type: none;
 }
@@ -150,12 +170,68 @@ li {
     text-decoration: underline;
 }
 
+/* Education Page Styles */
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.education-card {
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 380px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.year {
+    font-weight: bold;
+    color: var(--secondary-accent);
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.degree {
+    font-style: italic;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: var(--secondary-accent);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: var(--accent-color);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
     background-color: var(--secondary-bg-color);
     margin-top: 2rem;
-    color: white;
 }
 
 footer p {
@@ -163,6 +239,7 @@ footer p {
     color: #aaaaaa;
 }
 
+/* Media Queries */
 @media screen and (max-width: 480px) {
     h2 {
         font-size: 1.5rem;
@@ -174,6 +251,10 @@ footer p {
     
     #galeria div {
         grid-template-columns: 1fr;
+    }
+    
+    .education-card {
+        width: 100%;
     }
 }
 
@@ -194,6 +275,10 @@ footer p {
     header img {
         width: 150px;
         height: 150px;
+    }
+    
+    .education-container {
+        gap: 15px;
     }
 }
 
