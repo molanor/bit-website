@@ -1,35 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Example</title>
+    <title>Formación Académica</title>
     <style>
-        .parent {
-            width: 400px;
-            height: 300px;
-            border: 2px solid green;
-            display: flex;
-            flex-direction: column-reverse;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
-        
-        .child {
-            width: 75px;
-            height: 75px;
-            border: 2px solid orange;
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .education-container {
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
             justify-content: center;
-            align-items: center;
+        }
+        .education-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 380px;
+            transition: transform 0.3s ease;
+        }
+        .education-box:hover {
+            transform: translateY(-5px);
+        }
+        .year {
+            font-weight: bold;
+            color: #3498db;
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .institution {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .degree {
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <div class="flexbox">
-        <div class="parent">
-            <div class="child">1</div>
-            <div class="child">2</div>
-            <div class="child">3</div>
+    <h1>Formación Académica</h1>
+    
+    <div class="education-container">
+        <div class="education-box">
+            <span class="year">2021</span>
+            <span class="institution">Universidad EAN</span>
+            <span class="degree">Especialista en Gerencia de Proyectos</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2019</span>
+            <span class="institution">Universidad del Rosario</span>
+            <span class="degree">Maestría de Economía de las Políticas Públicas</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2015</span>
+            <span class="institution">Universidad del Rosario</span>
+            <span class="degree">Profesional en Ciencia Política y Gobierno</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2021</span>
+            <span class="institution">Servicio Nacional de Aprendizaje (SENA)</span>
+            <span class="degree">Curso Producción Agropecuaria, Ecológica para la Soberanía Alimentaria</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2020</span>
+            <span class="institution">Servicio Nacional de Aprendizaje (SENA)</span>
+            <span class="degree">Curso Especial en Emprendimiento en Producción de Cultivos Transitorios</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2015</span>
+            <span class="institution">Universidad del Rosario</span>
+            <span class="degree">Curso de Sistemas de Información Geográfica y Georreferenciada</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2014</span>
+            <span class="institution">Universidad del Rosario</span>
+            <span class="degree">Diplomado en Geopolítica y Relaciones Internacionales Contemporáneas</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2014</span>
+            <span class="institution">Universidad del Rosario</span>
+            <span class="degree">Diplomado en Amenazas Globales en Contextos Locales: Radiografía de Políticas de Seguridad</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2013</span>
+            <span class="institution">Institut Privé CAMPUS LANGUES</span>
+            <span class="degree">Curso de francés avanzado. Paris, Francia</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2013</span>
+            <span class="institution">Escuela Superior de Administración Pública (ESAP)</span>
+            <span class="degree">Diplomado en el Sistema General de Regalías y Control Social</span>
+        </div>
+        
+        <div class="education-box">
+            <span class="year">2011</span>
+            <span class="institution">Corporación Andina de Fomento, The Graduate School Of Political Management The George Washington University y la Universidad del Rosario</span>
+            <span class="degree">Diplomado en Altos Estudios en Gerencia Política y Gobernabilidad</span>
         </div>
     </div>
 </body>
