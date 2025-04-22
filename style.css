@@ -162,7 +162,7 @@ footer p {
     color: #aaaaaa;
 }
 
-/* Media queries para responsividad */
+
 @media screen and (max-width: 768px) {
     section {
         padding: 1.5rem;
