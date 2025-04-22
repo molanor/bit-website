@@ -103,8 +103,6 @@ a:hover {
     color: var(--accent-color);
     text-decoration: underline;
 }
-
-/* Trayectoria Section */
 #trayectoria div {
     display: flex;
     flex-direction: column;
@@ -119,8 +117,6 @@ a:hover {
     border-radius: var(--border-radius);
     margin-bottom: 0.5rem;
 }
-
-/* Galeria Section */
 #galeria div {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -141,20 +137,10 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* Videos Section */
 #videos div {
     margin-bottom: 2rem;
 }
 
-#videos iframe {
-    width: 100%;
-    height: 400px;
-    border: none;
-    border-radius: var(--border-radius);
-    margin-bottom: 1rem;
-}
-
-/* Contacto Section */
 #contacto ul {
     list-style-type: none;
 }
@@ -170,7 +156,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Education Page Styles */
 .education-container {
     display: flex;
     flex-wrap: wrap;
