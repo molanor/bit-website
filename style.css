@@ -155,6 +155,7 @@ footer {
     padding: 2rem;
     background-color: var(--secondary-bg-color);
     margin-top: 2rem;
+    color: white;
 }
 
 footer p {
@@ -162,6 +163,19 @@ footer p {
     color: #aaaaaa;
 }
 
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #galeria div {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media screen and (max-width: 768px) {
     section {
@@ -183,105 +197,16 @@ footer p {
     }
 }
 
-@media screen and (max-width: 480px) {
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    #galeria div {
-        grid-template-columns: 1fr;
-    }
-}<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-header {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f5f5f5;
-}
-
-header img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    max-height: 200px;
-}
-
-section {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-#galeria div {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-#galeria img {
-    width: 100%;
-    height: auto;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-@media (min-width: 576px) {
-    header {
-        padding: 1.5rem;
-    }
-
-    #galeria div {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-}
-
 @media (min-width: 768px) {
     body {
         max-width: 90%;
         margin: 0 auto;
     }
 
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    header img {
-        max-height: 250px;
-    }
-
-    section {
-        padding: 2rem;
-    }
-
     #trayectoria div {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-    }
-
-    #galeria div {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -321,211 +246,3 @@ footer {
         padding: 0;
     }
 }
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            text-align: center;
-            padding: 1rem;
-            background-color: #f5f5f5;
-        }
-
-        header img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-            max-height: 200px;
-        }
-
-        section {
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        #galeria div {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-
-        #galeria img {
-            width: 100%;
-            height: auto;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        @media (min-width: 576px) {
-            header {
-                padding: 1.5rem;
-            }
-
-            #galeria div {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (min-width: 768px) {
-            body {
-                max-width: 90%;
-                margin: 0 auto;
-            }
-
-            header {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem;
-            }
-
-            header img {
-                max-height: 250px;
-            }
-
-            section {
-                padding: 2rem;
-            }
-
-            #trayectoria div {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            #galeria div {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-
-        @media (min-width: 992px) {
-            body {
-                max-width: 80%;
-            }
-
-            header {
-                flex-direction: row;
-                text-align: left;
-                justify-content: flex-start;
-                gap: 2rem;
-            }
-
-            header h1, header p {
-                margin: 0;
-            }
-
-            #introduccion, #vida-personal {
-                column-count: 2;
-                column-gap: 2rem;
-            }
-
-            #trayectoria div {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            #galeria div {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            #contacto ul {
-                display: flex;
-                gap: 2rem;
-                list-style: none;
-                padding: 0;
-            }
-        }
-        @media (min-width: 576px) {
-            header {
-                padding: 1.5rem;
-            }
-
-            #galeria div {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (min-width: 768px) {
-            body {
-                max-width: 90%;
-                margin: 0 auto;
-            }
-
-            header {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem;
-            }
-
-            header img {
-                max-height: 250px;
-            }
-
-            section {
-                padding: 2rem;
-            }
-
-            #trayectoria div {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            #galeria div {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-
-        @media (min-width: 992px) {
-            body {
-                max-width: 80%;
-            }
-
-            header {
-                flex-direction: row;
-                text-align: left;
-                justify-content: flex-start;
-                gap: 2rem;
-            }
-
-            header h1, header p {
-                margin: 0;
-            }
-
-            #introduccion, #vida-personal {
-                column-count: 2;
-                column-gap: 2rem;
-            }
-
-            #trayectoria div {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            #galeria div {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            #contacto ul {
-                display: flex;
-                gap: 2rem;
-                list-style: none;
-                padding: 0;
-            }
-        }
